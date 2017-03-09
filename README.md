@@ -5,3 +5,4 @@
 3. Once downloaded, you can find the path /android-sdk-macosx/extras/google. Create a new directory named aidl under src/main. Create a package com.android.vending.billing under the aidl folder. Copy the IInAppBillingService.aidl from the above mentioned path and paste it in the com.android.vending.billing package.
 4. Build your program
 5. Create a package util under src/main/java/com.image.ram.inappbillingandroid. You can find util files under /android-sdk-macosx/extras/google/play_billing/samples/TrivialDrive/src/com/example/android/trivialdrivesample/util. Copy files from that location and paste in the newly created package util.
+6. To test the project, if you are using third party emulators, make sure you have google play services in it and you are signed into the google play
