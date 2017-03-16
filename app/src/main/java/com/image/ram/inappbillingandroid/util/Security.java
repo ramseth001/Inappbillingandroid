@@ -17,17 +17,9 @@ package com.image.ram.inappbillingandroid.util;
 
 import android.text.TextUtils;
 import android.util.Log;
+import com.image.ram.inappbillingandroid.BuildConfig;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
-import java.security.InvalidKeyException;
-import java.security.KeyFactory;
-import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
-import java.security.Signature;
-import java.security.SignatureException;
+import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 
@@ -59,6 +51,10 @@ public class Security {
         if (TextUtils.isEmpty(signedData) || TextUtils.isEmpty(base64PublicKey) ||
                 TextUtils.isEmpty(signature)) {
             Log.e(TAG, "Purchase verification failed: missing data.");
+            //This line allows the code to work when using static response SKU
+            if (BuildConfig.DEBUG) {
+                return true;
+            }
             return false;
         }
 
