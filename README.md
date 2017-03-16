@@ -6,3 +6,4 @@
 4. Build your program
 5. Create a package util under src/main/java/com.image.ram.inappbillingandroid. You can find util files under /android-sdk-macosx/extras/google/play_billing/samples/TrivialDrive/src/com/example/android/trivialdrivesample/util. Copy files from that location and paste in the newly created package util.
 6. To test the project, if you are using third party emulators, make sure you have google play services in it and you are signed into the google play
+7. The aim of the project would be purchase an image. Once an image is purchased, it would be gone in 5 seconds. And hence need to purchase again
